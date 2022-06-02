@@ -1,0 +1,13 @@
+.rich-text-menu input{
+    border:1px solid grey;
+    background:silver;
+    color:black;
+    display: inline-block;
+    width:auto;
+    padding:0.2em;
+}
+
+.rich-text-menu b {
+    color:darkgray;
+    line-height: 1.7em;;
+}

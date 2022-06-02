@@ -1,0 +1,519 @@
+/* NOTEBOOK PAGE */
+.for-print-removed {
+    display: none !important;
+}
+.for-print-removed-columns {
+    column-count: 1 !important;
+}
+.for-print-lnk-block {
+    display: block !important;
+    width:100% !important;
+}
+.for-print-body-padding {
+    padding:0 !important;
+}
+.for-print-display-h1 {
+    display:block !important;
+}
+.for-print-display-as-block {
+    display:block !important;
+    text-align: left !important;
+    border-left: 0.5em solid #eee;
+}
+
+
+
+
+body {
+    background-color:#fff;
+}
+
+div#notebook {
+    margin:0;
+    margin-top:0em;
+    padding:0em;
+    bottom:0;
+}
+#notebook article {
+    background:#fff;
+    /* border-radius: 5px; */
+    vertical-align: top;
+    min-height: 5em;
+    overflow: hidden; /* Fix for firefox and IE 10-11  */
+    -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+    page-break-inside: avoid; /* Firefox */
+    break-inside: avoid; /* IE 10+ */
+    break-inside: avoid-column;
+    /* margin-bottom: 2em; */
+    /* box-shadow:1px 1px 5px silver; */
+    position:relative;
+}
+#notebook article a.anchor, #notebook .terms a.anchor {
+    top:-5em;
+    position:absolute;
+}
+#notebook-title {
+    display:none;
+    color:white;
+    background-color: #000;
+    font-size: 1.6em;
+    font-weight: normal;
+    margin:0;
+    margin-bottom: 1em;
+    padding:0.5em;
+    text-align: left;
+}
+#notebook-title span {
+    color:gray;
+    display: block;
+    font-size: 0.8em;
+}
+#notebook h2 {
+    color: white;
+    background-color: black;
+    /*
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    */
+    font-weight: bold;
+    font-size: 1.1em;
+    margin:0;
+    text-align: left;
+    position:relative;
+}
+#notebook h2 span {
+    display: inline-block;
+    padding:0.5em;
+    border-left:0.5em solid grey;
+}
+#notebook h2 span:first-of-type {
+    max-width:90%;
+}
+#notebook h2 a {
+    color:white;
+    font-weight: normal;
+    text-decoration: none;
+}
+#notebook h2 .notemenu li a {
+    color:black;
+}
+#notebook h2 ul a {
+    padding:0 0.5em;
+    font-weight: normal;
+}
+#notebook h2 a:hover {
+    text-decoration: underline;
+}
+
+ul.notemenu {
+    font-size: 0.8em;
+    margin:0;
+    padding:0;
+    background-color:#fff;
+    list-style: none;
+    text-align: right;
+    position:absolute;
+    right:0;
+}
+.notemenu li {
+    padding: 0.3em;
+    display:none;    
+    right:0;
+}
+
+#notebook article input[type=checkbox] {
+    position: absolute;
+	visibility:hidden;
+}
+
+#notebook article label {
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    position:absolute;
+    right:0;
+    padding:0.5em;
+}
+
+#notebook article input[type=checkbox]:checked ~ .notemenu li {
+	display:inline-block;
+}
+
+#notebook  .menu-terms-trigger:hover div.menu-terms {
+    display: block;
+    padding-left:2em;
+}
+
+#notebook .menu-terms {
+    display: none;
+}
+#notebook .menu-terms:hover {
+    display: block;
+}
+#notebook .menu-terms a {
+    color: lightskyblue;
+    font-size: 0.9em;
+    font-weight: normal;
+    display: inline-block;
+    vertical-align: top;
+    margin:0.3em auto;
+    width:20em;
+}
+#notebook .menu-terms a:hover {
+    color:white;
+}
+
+
+
+/* LINKS */
+
+ul.links {
+    margin:0;
+    padding:0;
+    list-style: none;
+    text-align: left;
+    padding-top:1em;
+    padding-bottom: 1em;
+    /* border-bottom: 1px dashed silver; */
+}
+.links li {
+    margin:0.5em 1em;
+    display: inline-block;
+    width:22%;
+    vertical-align: top;
+}
+.links li a {
+    text-decoration: none;
+}
+.links li span {
+    line-height: 1em;
+    display: inline-block;
+    vertical-align: top;
+}
+.links li span:nth-of-type(2) {
+    width:95%;
+}
+.links li span:nth-of-type(2) a:hover {
+    text-decoration: underline;
+}
+.links li i {
+    display: block;
+    font-size: 0.8em;
+    line-height: 1em;
+    margin-top: 0.3em;
+    white-space: pre-wrap;
+    overflow-wrap:break-word;
+}
+
+
+/* IMAGES */
+div.images {
+    text-align: left;
+}
+span.image {
+    color: black;
+    font-weight: bold;
+    display:inline-block;
+    margin: 3em 2em;
+    text-align: center;
+    vertical-align: top;
+}
+span.image img {
+    display: block;
+}
+span.image p {
+    margin:0;
+    padding:0.5em 1em;
+    margin-bottom: 0.5em;
+}
+
+
+/* TERMS */
+section.terms {
+    background:transparent;
+    column-count: 1; /* temp change to view longer code more conveniently */
+    column-gap: 2em;
+    margin:0;
+    margin-top: 2em;
+    padding:0 1em 1em 1em;
+    /* border-bottom: 1px dashed silver; */
+    text-align: left;
+}
+.terms dl {
+    margin:0;
+    margin-bottom: 2em;
+    padding:0;
+    text-align: left;
+    vertical-align: top;
+    overflow: hidden; /* Fix for firefox and IE 10-11  */
+    -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+    page-break-inside: avoid; /* Firefox */
+    break-inside: avoid; /* IE 10+ */
+    break-inside: avoid-column;
+}
+.terms dt {
+    border-left:0.5em solid silver;
+    background:#f4f4f4;
+    font-weight: bold;
+    padding: 0.3em 0.5em;
+    border-bottom: 1px solid silver;
+    /* border-radius: 5px; */
+    position:relative;
+}
+.terms dt a {
+    text-decoration: none;
+    color:black;
+}
+.terms dd {
+    margin: 1em;
+    padding: 0 1em;
+    color:black;
+}
+.terms dd h3 {
+    color:maroon;
+	font-size:1.1em;
+	margin:1.5em -1em 0.5em -1em;
+    padding-bottom: 0.3em;
+    border-bottom:1px dashed silver;
+}
+.terms dd h4 {
+	font-size: 1.1em;
+	margin:1em -0.5em 0.5em -0.5em;
+}
+.terms dd h5 {
+	margin:1em 0 0.5em 0em;
+	font-size: 1em;
+}
+.terms dd h6 {
+	margin:0.5em;
+	font-size: 0.9em;
+}
+.terms dd pre {
+    white-space: pre-wrap;
+    overflow-wrap:break-word;
+    font-size: 1.2em;
+    color:green;
+    padding: 0.5em;
+    border-left: 1px dotted grey;
+}
+.terms dd pre strong {
+    color:black;
+    font-weight: bold;
+}
+.terms dd pre b {
+	color:DarkSlateBlue ;
+}
+.terms dd pre i {
+    color:darkorange;
+    font-weight: normal;
+}
+.terms dd pre summary {
+	display:inline-block;
+	text-align:right;
+	padding:0.5em;
+}
+.terms dd table {
+    margin: 1em 0;
+}
+.terms dd table th {
+    background-color:#eee;
+}
+.terms dd table th, .terms dd table td {
+    padding: 0 1em;
+    margin:0;
+    border-right:1px dotted silver;
+}
+.terms dd table th.inverse {
+    color:white;
+    background-color:black;
+    padding: 0.3em;
+}
+.terms dd table td {
+    border-top: 1px dotted silver;
+}
+.terms dd table tr:first-of-type td {
+    border-top: none;
+}
+.terms dd table td:last-of-type, .terms dd table th:last-of-type {
+    border-right:none;
+}
+.terms dd table.tools td {
+	padding:0.5em;
+}
+.terms dd table.tools > tbody > tr > td:first-of-type {
+    font-weight:bold;
+}
+
+.terms dd table.tools tr:first-child td {
+	border-top: none;
+}
+.terms dd table.tools pre {
+	border:0;
+}
+
+.terms dd table.ps td {
+	border:none;
+	font-family:monospace;
+	font-size:1.2em;
+	padding:0 0.2em;
+}
+.terms dd table.ps td:nth-child(1) {
+	color:darkorange;
+	text-align:right;
+}
+.terms dd table.ps td:nth-child(2) {
+	font-weight:bold;
+}
+.terms dd aside {
+	color:grey;
+	font-style:italic;
+	margin:1em;
+}
+
+.terms dd table.auto {
+	display:inline-block;
+	vertical-align:top;
+	margin:1em 2em 1em 0em;
+}
+
+.terms ul.list {
+    overflow: auto;
+    padding-left: 0.5em;
+}
+.terms ul.list li {
+    float: left;
+    margin:auto 2em auto 1em;
+    padding-right:1em;
+}
+
+.terms ol { counter-reset: item }
+.terms ol li{ display: list-item }
+/*.terms ol li:before { content: counters(item, ".") ". "; counter-increment: item }*/
+
+.terms .frac {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    letter-spacing: 0.001em;
+    text-align: center;    
+}
+.frac > i {
+    display: block;
+    font-style: normal;
+    padding: 0.1em;
+}
+.terms .frac i:nth-child(2) {
+    border-top: thin solid black;
+}
+
+.terms dd table.big td, .terms dd table.big th {
+    padding:1em;
+}
+
+.terms .math-macron {
+    border-top: 1px solid black;
+}
+
+.terms .pretext {
+    border:none;
+    color:black;
+    font-family: inherit;
+    font-size: inherit;
+    padding:0;
+}
+
+.terms code{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1em;
+    white-space: pre;
+    white-space: pre-wrap;
+    overflow-wrap:break-word;
+}
+
+.terms hr {
+    border-top:1px dotted grey;
+    margin:2em;
+}
+
+
+.terms div.jumbo {
+    background-color: #eee;
+    margin: 2em auto;
+    padding:1em;
+    padding-top: 0.5em;
+    position: relative;
+    white-space: pre;
+    white-space: pre-wrap;
+    overflow-wrap:break-word;
+}
+.terms div.jumbo h3 {
+    color: grey;
+    font-size: 1em;
+    background-color: #eee;
+    position: absolute;
+    display: inline-block;
+    margin: 0;
+    padding:0.2em 0.5em;
+    top: -0.7em;
+    border:0;
+    box-shadow: 0px 0px 0px 3px #fff;
+}
+.terms .block{
+    display:inline-block;
+    margin: 1em;
+    vertical-align: top;
+}
+.terms .nowrap{
+    white-space: nowrap;
+}
+.terms .small{
+    font-size: 0.9em;
+}
+.terms .smallall > * {
+    font-size: 0.9em;
+}
+.terms .verysmallall > * {
+    font-size: 0.7em;
+}
+.terms .red{
+    background-color: lightpink;
+}
+.terms .green{
+    background-color: aquamarine;
+}
+.terms .yellow{
+    background-color: lightgoldenrodyellow;
+}
+.menu-terms a {
+    border-left: 0.1em solid dimgray;
+    padding-left: 0.5em;
+}
+.terms .border {
+    border:1px solid gray;
+    padding:0.1em 0.3em;
+}
+.terms dd > code i{
+    color:goldenrod;
+}
+.terms table.sparse td{
+    padding:1em;
+}
+.terms .redinv{
+    font-weight: normal;
+    background-color: lightpink;
+}
+.terms tr.dim > *{
+    color:lightgray;
+    border-color: lightgray;
+}
+.terms tr.dim .redinv {
+    background-color:gainsboro;
+    color:white;
+}
+.terms code.small {
+    font-size: 0.9em;
+}
+.terms .info{
+    background:#eee;
+    padding: 0.5em;
+}

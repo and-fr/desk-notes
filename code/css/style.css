@@ -1,0 +1,306 @@
+html {
+    overflow: -moz-scrollbars-vertical; 
+    overflow-y: scroll;    
+}
+html::-webkit-scrollbar { width: 1em; background-color: #444; }
+html::-webkit-scrollbar-thumb { background-color: #888; }
+body {
+    background:#222;
+    color:gainsboro;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin:0;
+    padding-top:4em;
+    text-align: center;
+}
+
+nav {
+    position: fixed;
+    top:0;
+    width:100%;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    top: 0;
+}
+nav li {float: left;}
+nav li a {
+    display: block;
+    color: grey;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px black;
+}
+nav li a:hover {background-color: #111;color:gainsboro;}
+nav .name {background-color: darkcyan; color:gainsboro;}
+nav .name:hover {background-color:darkcyan;}
+nav .active, nav .active:hover {background-color: inherit;color:silver;}
+nav .bright a {color:silver;}
+
+nav #menu1 label {
+    color:#ccc;
+    position:relative;
+    display:block;
+    cursor:pointer;
+    padding: 14px 16px;
+}
+nav #menu1 input {
+    display: none;
+}
+nav #menu1 label:hover {
+    background-color: black;
+}
+nav #menu1sub {
+    list-style-type:none;
+    position:absolute;
+    top:49px;
+    display:block;
+    visibility: hidden;
+}
+nav #menu1sub li {
+    float: none;
+    border-left:5px solid grey;
+}
+nav #menu1sub li a{
+    color:#eee;
+    padding:0.3em 1em;
+    text-align: left;
+}
+
+nav #menu1 input:checked ~ #menu1sub{
+    visibility: visible;
+}
+
+
+
+/* FORMS START */
+
+form {
+    width:90%;
+    text-align:left;
+    margin:auto;
+    display:inline-block;
+}
+form  * {
+    background-color:transparent;
+    font-size: 1.1em;
+    color: white;
+    vertical-align:top;
+}
+form a {
+    text-decoration: none;
+    color: silver;
+}
+form a:hover {
+    text-decoration: underline;
+    color: white;
+}
+form h4 b {
+    font-size: inherit;
+    color:orange;
+}
+form h4 a {
+    color:lightskyblue;
+    font-weight: normal;
+    float:right;
+    margin: auto 1em;
+}
+input, textarea, select {
+    border:0;
+    border:1px dotted #666;
+    font:inherit;
+    padding:0.5em;
+    width: 100%;
+    display: block;
+    margin-bottom:1em;
+}
+option {background:black;}
+textarea {height:23em;resize:none;}
+
+input[type=radio] {
+    display: inline-block;
+    width:auto;
+}
+
+input[type=checkbox] {
+    visibility: hidden;
+}
+.checkbox {
+    width: 1.2em;
+    height: 1.2em;
+    background: #888;
+    display: inline-block;
+    margin:0.5em;
+    border-radius: 100%;
+    position: relative;
+}
+.checkbox label {
+    display: block;
+    width: 1.2em;
+    height: 1.2em;
+    border-radius: 100px;
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    background:grey;
+}
+.checkbox input[type=checkbox]:checked + label {
+    background: orange;
+}
+.form-buttons-area {
+    text-align: center;
+    margin-top:2em;
+}
+.form-buttons-area a, .form-buttons-area a:hover {text-decoration:none;}
+.btn {
+    cursor: pointer;
+    display:inline-block;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border:1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    border-radius:.25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    margin:0 0.5em;
+}
+.btn-success{
+    color:white;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+.btn-secondary{
+    color:white;
+    background-color: #868e96;
+    border-color: #868e96;
+}
+.btn-danger{
+    color:white;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+.autosize {width:auto;display:inline-block;margin-right:1em;}
+
+form input {
+    background-color:#222;color:white;
+}
+
+/* FORMS END */
+
+
+
+/* COLLECTIONS & NOTEBOOKS MAIN SCREEN */
+
+
+#collections {
+    margin:2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: minmax(min,auto);
+    column-gap: 2em;
+    row-gap:2em;
+}
+
+
+div.collection {
+    background-color:#333;
+    border-radius:5px;
+    overflow: hidden; /* Fix for firefox and IE 10-11  */
+    -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+    page-break-inside: avoid; /* Firefox */
+    break-inside: avoid; /* IE 10+ */
+    break-inside: avoid-column;
+    vertical-align: top;
+}
+.collection h2 {
+    font-size:1.2em;
+    margin:0.5em;
+    padding:0;
+    position:relative;
+    text-align: left;
+}
+.collection h2 * {
+    display: inline-block;
+    margin:0;
+    padding:0;
+    vertical-align: middle;
+}
+.collection i {
+    text-shadow: 1px 1px 2px black;
+}
+.collection h2 a {
+    color:grey;
+    font-weight: normal;
+    margin-left:0.5em;
+    top:0;
+    text-decoration:none;
+    text-shadow: 1px 1px 2px black;
+}
+.collection h2 a:nth-of-type(1) {
+    width:70%;
+}
+.collection h2 a:nth-of-type(2) {
+    color:dimgray;
+    right:0;
+    margin-right:0.3em;
+    position:absolute;
+}
+.collection h2 a:hover {
+    color:white;
+}
+.collection ul {
+    background-color:#111;
+    margin: 0;
+    padding:0.5em 0;
+    list-style: none;
+    text-align: left;
+}
+.collection li {
+    border-left:2px solid black;
+    margin:0;
+    font-size: 1.1em;
+    padding:0.2em 0.5em;
+}
+.collection li a {
+    color:transparent;
+    display: block;
+    text-decoration:none;
+    color:silver;
+    position: relative;
+}
+.collection li a span {
+    color:Silver;
+    width:65%;
+    display: inline-block;
+    line-height: 1em;
+    vertical-align: middle;
+}
+.collection li a span.important{
+    color:white;
+    font-weight: bold;
+}
+.collection li a span em{
+    color:yellow;
+}
+.collection li a:hover {
+    color:white;
+    text-decoration: underline;
+}
+.collection li a i {
+    font-style: normal;
+    margin-left:1em;
+    display: inline-block;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+.collection li a i b {
+    color:orange;
+}
